@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h2>JavaScript in Head</h2>
+
+<p id="demo" style="display:block">Hola.</p>
+
+<button id="push1" type="button" onclick="cambia()">cambia</button>
+
+<button id="push2" type="button" onclick="muestra()" 
+ onmouseover="fondo()"
+ onmouseout="fondo()">oculta</button>
+ 
+<button id="push3" type="button" onclick="borra()">borra</button>
+
+<script>
+var x=true,
+    y=true,
+    z=true;
+
+function cambia() {
+ if (x==true){
+  document.getElementById("demo").innerHTML = "uno";   
+  document.getElementById("push1").style.backgroundColor= "green";  
+  }else {document.getElementById("demo").innerHTML = "dos";
+         document.getElementById("push1").style.backgroundColor= "blue"; }
+ x=!x;
+}
+ 
+function muestra(){
+ y=!y;
+ if (y==true){
+  document.getElementById("demo").style.display='block';
+  document.getElementById("push2").innerHTML = "oculta";
+  }else {  document.getElementById("demo").style.display='none';
+           document.getElementById("push2").innerHTML = "muestra";}
+}
+
+function fondo(){
+ if (z==true){
+  document.getElementById("push2").style.backgroundColor= "gray";
+  }else { document.getElementById("push2").style.backgroundColor= "white";}
+ z=!z;
+}
+
+function borra(){
+ document.getElementById("push3").style.backgroundColor= "red"; 
+ window.alert('Se borrara la pagina');
+ document.write(2-2);
+}
+
+/*Seccion de comentarios
+innerHTML cambia contenido de un objeto
+style.display Cambia formato o visualizacion del objeto 
+*/
+</script>
+
+</body>
+</html> 
